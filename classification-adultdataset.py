@@ -16,17 +16,6 @@ salary = {'<=50K': 0, '>50K': 1}
 
 df['salary'] = df['salary'].map(salary)
 le = preprocessing.LabelEncoder()
-
-"""
-df['workclass'] = le.fit_transform(df['workclass']) 
-df['education'] = le.fit_transform(df['education']) 
-df['marital-status'] = le.fit_transform(df['marital-status']) 
-df['occupation'] = le.fit_transform(df['occupation']) 
-df['relationship'] = le.fit_transform(df['relationship']) 
-df['race'] = le.fit_transform(df['race']) 
-df['sex'] = le.fit_transform(df['sex']) 
-df['native-country'] = le.fit_transform(df['native-country']) 
-"""
 for x in columns:
     df[x] = le.fit_transform(df[x])
 
